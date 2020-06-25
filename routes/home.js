@@ -7,7 +7,7 @@ router.get("/", async(req, res) => {
 
 });
 
-router.get("/about", (req, res) => {
+router.get("/about", async(req, res) => {
     let searchOptions = {};
     if (req.query.name != null && req.query.name !== "") {
         searchOptions.name = new RegExp(req.query.name, "i");
